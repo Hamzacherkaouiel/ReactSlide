@@ -9,7 +9,7 @@ function Addetudiant(){
     const [nom,setNom]=useState("")
     async function createStudent() {
         const objectStudent={nom:nom}
-        axios.post(`http://localhost:7000/Students`,objectStudent)
+        axios.post(`http://back.com/Students`,objectStudent)
         navigate('/')
         
     }

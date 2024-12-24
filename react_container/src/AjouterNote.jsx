@@ -12,7 +12,7 @@ function Addnote(){
     const id=location.state
     async function CreateNote() {
         const note={nom:nom,value:value}
-        await axios.post(`http://localhost:7000/Students/${id}/Notes`,note)
+        await axios.post(`http://back.com/Students/${id}/Notes`,note)
         
     }
     const handleChangeName=(e)=>{

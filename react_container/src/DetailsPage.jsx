@@ -18,7 +18,7 @@ function DetailsStudent(){
     const location=useLocation();
     const dataReciver=location.state;
     async function  getNote(id){
-         const note=await axios.get(`http://localhost:7000/Students/${id}/Notes?sort=sort`)
+         const note=await axios.get(`http://back.com/Students/${id}/Notes?sort=sort`)
          console.log(note.data)
          setNotes(note.data)
     }
@@ -30,7 +30,7 @@ function DetailsStudent(){
         console.log(Notes)
     },[])
     async function suppression(id){
-        axios.delete(`http://localhost:7000/Students/${dataReciver.id_student}/Notes/${id}`)
+        axios.delete(`http://back.com/Students/${dataReciver.id_student}/Notes/${id}`)
         Navigate('/Table')
     }
 

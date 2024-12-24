@@ -17,7 +17,7 @@ function Studentss(){
     }
 
     const dataofstudents=async function  () {
-            const getstudents=await axios.get('http://localhost:7000/Students?sort=sort')
+            const getstudents=await axios.get('http://back.com/Students?sort=sort')
         console.log(getstudents.data)
         setStudents(getstudents.data)  
             
@@ -25,7 +25,7 @@ function Studentss(){
 
     }
     const deletetudent=async function(id) {
-        await axios.delete(`http://localhost:7000/Students/${id}`)
+        await axios.delete(`http://back.com/Students/${id}`)
         navigate('/')
 
         
